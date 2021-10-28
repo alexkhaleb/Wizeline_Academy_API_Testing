@@ -741,7 +741,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code name it's OK :)\", () => {",
+									"pm.test(\"Status code name it's OK2 :)\", () => {",
 									"  pm.response.to.have.status(\"OK\");",
 									"});",
 									"",
