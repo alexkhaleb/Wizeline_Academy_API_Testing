@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x, 14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,7 +28,4 @@ jobs:
         registry-url: https://registry.npmjs.org/
     - run: npm install
     - run: npm install -g newman
-    - run: | 
-            npm run  start:dev &
-            sleep 60
-            newman run mycollection.json -e env.json -r html
+    - run: newman run mycollection.json -e env.json -r html
