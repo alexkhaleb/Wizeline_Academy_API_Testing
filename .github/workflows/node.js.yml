@@ -28,4 +28,5 @@ jobs:
         registry-url: https://registry.npmjs.org/
     - run: npm install
     - run: npm install newman-reporter-html
+    - run: sleep 30
     - run: newman run mycollection.json -e env.json -r html
