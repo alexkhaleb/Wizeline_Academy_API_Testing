@@ -3,6 +3,7 @@
     "dotenv": "^10.0.0",
     "faker": "^5.5.3",
     "nanoid": "^3.1.30",
+    "node": "^17.0.1",
     "testcafe": "^1.16.1",
     "testcafe-reporter-html": "^1.4.6",
     "testcafe-reporter-jenkins": "^1.0.1"
@@ -15,8 +16,8 @@
     "testC": "testcafe chrome ./pom/tests --reporter html:tests/results/results.html --concurrency 2",
     "smoke-tests": "testcafe chrome:headless --reporter html:tests/results/results.html ./pom/tests --test-meta type=smoke",
     "headless": "testcafe chrome:headless ./pom/tests --reporter html:tests/results/results.html",
-    "gittest": "newman run './Wizeline_Academy_API_Testing/mycollection.json' -e './Wizeline_Academy_API_Testing/Env.json'",
-    "gitnegtest": "newman run './Wizeline_Academy_API_Testing/Negative_Collection.json' -e './Wizeline_Academy_API_Testing/Env.json'"
+    "gittest": "newman run './tests/mycollection.json' -e './tests/env.json'",
+    "gitnegtest": "newman run './Wizeline_Academy_API_Testing/Negative_Collection.json' -e './Wizeline_Academy_API_Testing/env.json'"
   },
   "author": "agarduno",
   "license": "ISC",
