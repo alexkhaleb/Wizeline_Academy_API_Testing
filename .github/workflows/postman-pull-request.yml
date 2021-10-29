@@ -1,12 +1,21 @@
 name: postman-pull-request
-on: [push, pull_request] // this action runs on each new push 
-                         // and pull_request
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
   steps:
   - name: Check out Git repositor
     uses: actions/checkout@v1
