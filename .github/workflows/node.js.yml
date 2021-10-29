@@ -29,4 +29,4 @@ jobs:
     - run: npm install
     - run: npm install newman-reporter-html
     - run: sleep 30
-    - run: newman run mycollection.json -e env.json -r html
+    - run: newman run mycollection.json -e env.json --reporter-html-export newman
